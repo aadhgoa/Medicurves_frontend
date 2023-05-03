@@ -15,13 +15,17 @@ const Navbar = () => {
 				<Bars />
 
 				<NavMenu>
-					<h4><b>Medicurves</b></h4>
+					<h4 style={{color: "#FFDB58" }}><b>Medicurves</b></h4>
 					<br></br>
-					<NavLink to='/Home' activeStyle>
-						Home
+				
+					<NavLink to='/About' activeStyle>
+						About
 					</NavLink>
+					{/* <NavLink to='/Login' activeStyle>
+						Login 
+					</NavLink> */}
 					<NavLink to='/Login' activeStyle>
-						Login
+						LogOut
 					</NavLink>
 
 					{/* Second Nav */}

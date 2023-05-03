@@ -1,12 +1,13 @@
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react'
 import Navbar from './Navbar';
 import axios from 'axios';
+import { FaAlignJustify } from 'react-icons/fa';
 
 
 const Home = () => {
@@ -145,38 +146,40 @@ const Home = () => {
     return (
         <>
             {/* <Navbar/> */}
-            <div className="container mt-3 col-lg-6">
-                <section >
-                    <div className="left_data " >
+            <div className="container mt-3 ">
+                <section className='d-flex justify-content-between'>
+                    <div className="left_data mt-30 p-3 " style={{width:"50%" ,height:"50",marginLeft:65,borderRadius: 10}} >
                         <h3 className='text-center col-lg-6'>Sign Up</h3>
-                        <br></br>
+                        
 
                         <Form >
-                            <Form.Group className="mb-3 col-lg-15" controlId="formBasicEmail">
+                            <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
                                 <Form.Label>Username</Form.Label>
-                                <Form.Control type="text" name='username' onChange={getdata} placeholder="Enter Username" />
+                                <Form.Control type="text" name='username' onChange={getdata} placeholder="Enter Username" autoComplete="off"/>
                             </Form.Group>
-                            <Form.Group className="mb-3 col-lg-15" controlId="formBasicEmail">
+                            <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" name='email' onChange={getdata} placeholder="Enter email id" />
+                                <Form.Control type="email" name='email' onChange={getdata} placeholder="Enter email id" autoComplete="off"/>
                             </Form.Group>
 
-                            <Form.Group className="mb-3 col-lg-15" controlId="formBasicPassword">
+                            <Form.Group className="mb-3 col-lg-6" controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" />
+                                <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" autoComplete="off"/>
                             </Form.Group>
-                            <Form.Group className="mb-3 col-lg-15" controlId="formBasicConfirmPassword">
+                            <Form.Group className="mb-3 col-lg-6" controlId="formBasicConfirmPassword">
                                 <Form.Label> Confirm Password</Form.Label>
-                                <Form.Control type="password" name='confirm_password' onChange={getdata} placeholder="Confirm Password" />
+                                <Form.Control type="password" name='confirm_password' onChange={getdata} placeholder="Confirm Password" autoComplete="off" />
                             </Form.Group>
                             <br></br>
-                            <Button variant="primary" className='col-lg-15' onClick={addData} style={{ background: "black" }} type="submit">
-                                Submit
+                            <Button variant="primary" className='col-lg-2.9' onClick={addData} style={{ background: "black", width:100,marginLeft:65,borderRadius: 5}} type="submit">
+                            <div style={{color: "#FFDB58"}} > SIGN UP </div>  
                             </Button>
                         </Form>
-                        <p className='mt-3'>Already Have an Account <span><NavLink to="/login">SignIn</NavLink></span> </p>
+                        <p className='mt-3'style={{ marginLeft:6.5}}>Already Have an Account <span><NavLink to="/login">SignIn</NavLink></span> </p>
                     </div>
-                    <div className="right_data"> </div>
+                    <div className= "position-fixed top-50 start-100 translate-middle" style={{maxwidth:100 ,position:"left"}}> 
+                    <img src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7885.jpg?w=2000" style={{maxWidth:350,marginRight:700,borderRadius: 290}} alt="" />
+                    </div>
 
                 </section>
                 <ToastContainer />

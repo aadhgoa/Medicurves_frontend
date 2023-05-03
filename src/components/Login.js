@@ -11,7 +11,7 @@ const Login = () => {
     const history = useNavigate();
 
     const [inpval, setInpval] = useState({
-        email: "",
+        text: "",
         password: ""
     })
 
@@ -50,7 +50,7 @@ const Login = () => {
 
         console.log(myHeaders);
         const data = new URLSearchParams();
-        data.append("username", inpval.email);
+        data.append("username", inpval.text);
         data.append("password", inpval.password);
         console.log(data);
 
@@ -102,29 +102,32 @@ const Login = () => {
     return (
         <>
             <div className="container mt-3">
-                <section className=' justify-content-center'>
-                    <div className="left_data mt-3 p-3" style={{ height: "100%" }}>
-                        <h3 className='text-center col-lg-10'>Sign In</h3>
+                <section className='d-flex justify-content-between'>
+                    <div className="left_data mt-4 p-3" style={{ height: "100%",marginLeft:75 }}>
+                        <h3 className='text-center col-lg-20'>Sign In</h3>
                         <br></br>
-                        <Form >
+                        <Form  >
 
-                            <Form.Group className="mb-3 col-lg-10" controlId="formBasicEmail">
+                            <Form.Group className="mb-4 col-lg-29" controlId="formBasicEmail">
 
-                                <Form.Control type="email" name='email' onChange={getdata} placeholder="Enter email" />
+                                <Form.Control type="text" name='text' onChange={getdata} placeholder="Enter username" autoComplete="off"/>
                             </Form.Group>
 
-                            <Form.Group className="mb-3 col-lg-10" controlId="formBasicPassword">
+                            <Form.Group className="mb-4 col-lg-29" controlId="formBasicPassword">
 
-                                <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" />
+                                <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" autoComplete="off" />
                             </Form.Group>
                             <br></br>
 
-                            <Button variant="primary" className='col-lg-10' onClick={addData} style={{ background: "black" }} type="submit">
-                                Submit
+                            <Button variant="primary" className='col-lg-50 d-flex justify-content-center' onClick={addData} style={{ background: "black",width:100,marginLeft:50,borderRadius: 5}} type="submit">
+                             <div style={{color: "#FFDB58"}} > SIGN IN </div>  
                             </Button>
                         </Form>
                         <br></br>
-                        <p className='text-center col-lg-10'>Welcome Back ! </p>
+                        <p className='text-center col-lg-17'>Welcome Back ! </p>
+                    </div>
+                    <div className= "position-fixed top-50 start-100 translate-middle" style={{maxwidth:50 ,position:"left"}}> 
+                    <img src="https://www.allen.ac.in/ace2223/assets/images/login.png" style={{maxWidth:400,marginRight:750}} alt="" />
                     </div>
                 </section>
                 <ToastContainer />
