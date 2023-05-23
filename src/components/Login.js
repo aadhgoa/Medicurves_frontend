@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 const Login = () => {
 
@@ -124,10 +125,10 @@ const Login = () => {
                             </Button>
                         </Form>
                         <br></br>
-                        <p className='text-center col-lg-17'>Welcome Back ! </p>
+                        <p className='text-center col-lg-17'>Dont have an account ?  <NavLink to="/Home">Sign Up</NavLink></p>
                     </div>
                     <div className= "position-fixed top-50 start-100 translate-middle" style={{maxwidth:50 ,position:"left"}}> 
-                    <img src="https://www.allen.ac.in/ace2223/assets/images/login.png" style={{maxWidth:400,marginRight:750}} alt="" />
+                    <img src="https://www.allen.ac.in/ace2223/assets/images/login.png" style={{maxWidth:800,marginRight:750}} alt="" />
                     </div>
                 </section>
                 <ToastContainer />

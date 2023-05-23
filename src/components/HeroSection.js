@@ -94,7 +94,13 @@ function HeroSection() {
             {receivedImage && <img src={receivedImage} alt="Predicted" />}
           </section>
           </div>}
-          
+          <div>
+            <button>Download</button>
+            <button>Download All</button>
+            <button>End Session</button>
+            <button style={{ width:100}}>Next Progression</button>
+
+          </div>
         </React.Fragment>
   );
 }

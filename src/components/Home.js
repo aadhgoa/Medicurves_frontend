@@ -155,27 +155,27 @@ const Home = () => {
                         <Form >
                             <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
                                 <Form.Label>Username</Form.Label>
-                                <Form.Control type="text" name='username' onChange={getdata} placeholder="Enter Username" autoComplete="off"/>
+                                <Form.Control type="text" name='username' onChange={getdata} placeholder="Enter Username" autoComplete="off" required/>
                             </Form.Group>
                             <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" name='email' onChange={getdata} placeholder="Enter email id" autoComplete="off"/>
+                                <Form.Control type="email" name='email' onChange={getdata} placeholder="Enter email id" autoComplete="off" required/>
                             </Form.Group>
 
                             <Form.Group className="mb-3 col-lg-6" controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" autoComplete="off"/>
+                                <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" autoComplete="off" minLength="6" required/>
                             </Form.Group>
                             <Form.Group className="mb-3 col-lg-6" controlId="formBasicConfirmPassword">
                                 <Form.Label> Confirm Password</Form.Label>
-                                <Form.Control type="password" name='confirm_password' onChange={getdata} placeholder="Confirm Password" autoComplete="off" />
+                                <Form.Control type="password" name='confirm_password' onChange={getdata} placeholder="Confirm Password" autoComplete="off" minLength="6" required />
                             </Form.Group>
                             <br></br>
                             <Button variant="primary" className='col-lg-2.9' onClick={addData} style={{ background: "black", width:100,marginLeft:65,borderRadius: 5}} type="submit">
                             <div style={{color: "#FFDB58"}} > SIGN UP </div>  
                             </Button>
                         </Form>
-                        <p className='mt-3'style={{ marginLeft:6.5}}>Already Have an Account <span><NavLink to="/login">SignIn</NavLink></span> </p>
+                        <p className='mt-3'style={{ marginLeft:6.5}}>Already Have an Account? <span><NavLink to="/login">Sign In</NavLink></span> </p>
                     </div>
                     <div className= "position-fixed top-50 start-100 translate-middle" style={{maxwidth:100 ,position:"left"}}> 
                     <img src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7885.jpg?w=2000" style={{maxWidth:350,marginRight:700,borderRadius: 290}} alt="" />
