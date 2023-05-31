@@ -75,7 +75,7 @@
 import React, { useState } from 'react';
 // import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
-// import Footer from '../components/Footer';
+import Footer from '../components/Footer';
 import '../styles/home.css';
 import Navbar from './Navbar';
 
@@ -90,7 +90,7 @@ const Home = () => {
       <Navbar />
       {/* <Sidebar /> */}
       <HeroSection />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

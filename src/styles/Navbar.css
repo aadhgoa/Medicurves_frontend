@@ -1,0 +1,70 @@
+/* Navbar styles */
+.navbar {
+  background-color: #000000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo h4{
+  text-decoration: none;
+}
+
+.navbar-logo h4 a {
+  text-decoration: none;
+}
+
+
+.navbar-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-menu-link {
+  list-style-type: none;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  transition: color 0.3s;  
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar-menu-link a {
+  text-decoration: none;
+  color: #d5d5d5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar-menu-link a:hover {
+  color: #fff;
+}
+
+.navbar-button {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-button .btn {
+  color: #fff;
+  background-color: #FFC72C;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.navbar-button .btn:hover {
+  background-color: #FFB200;
+}

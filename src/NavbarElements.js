@@ -10,10 +10,10 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   align-items: center;
-  width: 1215px;
+  width: 100vw;
   position:  top ;
 
-  padding: 0.2rem calc((100vw - 1000px) / 2);
+  padding: 0 10rem;
   z-index: 12;
 
 `;
@@ -43,8 +43,7 @@ export const Bars = styled(FaBars)`
   display: none;
   color: #808080;
   @media screen and (max-width: 768px) {
-    display: flex
-    ;
+    display: flex;
     position: fixed;
     width: 100%;
 
@@ -59,7 +58,7 @@ export const Bars = styled(FaBars)`
   
 export const NavMenu = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   display: flex;
   border-radius: 4px;
